@@ -91,6 +91,8 @@ class QueryLivePeopleActivity : ComponentActivity() {
             val context = LocalContext.current
             val lifecycleOwner = LocalLifecycleOwner.current
 
+            val errorLabel = stringResource(R.string.error)
+
             LaunchedEffect(autoRefreshEnabled, autoRefreshInterval) {
                 if (autoRefreshEnabled) {
                     lifecycleOwner.lifecycle.repeatOnLifecycle(Lifecycle.State.RESUMED) {
@@ -221,7 +223,7 @@ class QueryLivePeopleActivity : ComponentActivity() {
                         if (lifecycleOwner.lifecycle.currentState.isAtLeast(Lifecycle.State.STARTED)) {
                             viewModel.loadLivePeopleData()
                         }
-                        LogUtils.e("${context.getString(R.string.error)} ${state.message}")
+                        LogUtils.e("$errorLabel ${state.message}")
                     }
                 }
 
