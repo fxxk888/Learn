@@ -1,4 +1,10 @@
-# Learn
+# Learn-Android
+
+Python Version: [Learn-Python](https://github.com/fxxk888/Learn-Python/)
+
+## Download
+
+Download the latest version here: [Releases](https://github.com/fxxk888/Learn-Android/releases)
 
 ## References
 
